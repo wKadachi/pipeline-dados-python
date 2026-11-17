@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pipeline de Limpeza e Validação de Dados</title>
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --surface: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --green: #16a34a;
+      --green-bg: #dcfce7;
+      --amber: #d97706;
+      --amber-bg: #fef3c7;
+      --red: #dc2626;
+      --red-bg: #fee2e2;
+      --blue-bg: #dbeafe;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .brand p {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    .api-link {
+      font-size: 0.85rem;
+      color: var(--primary);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .api-link:hover { background: var(--bg); }
+
+    main {
+      max-width: 1100px;
+      margin: 28px auto;
+      padding: 0 20px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .dropzone {
+      border: 2px dashed #cbd5e1;
+      border-radius: var(--radius);
+      padding: 36px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      background: #f8fafc;
+    }
+
+    .dropzone.dragover {
+      border-color: var(--primary);
+      background: #eff6ff;
+    }
+
+    .dropzone strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .dropzone span {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-primary:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: var(--text);
+    }
+
+    .btn-secondary:hover { background: #cbd5e1; }
+
+    .btn-success {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .btn-success:hover { background: #15803d; }
+
+    .file-pill {
+      font-size: 0.85rem;
+      color: var(--text);
+      background: var(--blue-bg);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    .alert {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    .alert.error {
+      display: block;
+      background: var(--red-bg);
+      color: var(--red);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+
+    .stat-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .stat-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .stat-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .stat-green .stat-value { color: var(--green); }
+    .stat-amber .stat-value { color: var(--amber); }
+    .stat-red .stat-value { color: var(--red); }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    th {
+      background: #f8fafc;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-ok { background: var(--green-bg); color: var(--green); }
+    .badge-fix { background: var(--amber-bg); color: var(--amber); }
+    .badge-err { background: var(--red-bg); color: var(--red); }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hidden { display: none; }
+
+    .empty-msg {
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Pipeline de Limpeza e Validação de Dados</h1>
+        <p>Envie sua planilha (.CSV ou .XLSX) para limpar, validar e baixar os dados prontos em segundos.</p>
+      </div>
+      <a class="api-link" href="/docs" target="_blank">Documentação Técnica (API /docs)</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Passo 1: Upload -->
+    <section class="card">
+      <div class="card-title">1. Enviar Planilha</div>
+      <div class="card-subtitle">
+        Arraste um arquivo CSV ou Excel aqui, ou clique para escolher. Você também pode testar com um arquivo de exemplo pronto.
+      </div>
+
+      <div id="dropzone" class="dropzone">
+        <strong>Clique aqui ou arraste sua planilha (.csv ou .xlsx)</strong>
+        <span>Formatos aceitos: CSV (vírgula ou ponto e vírgula) e Excel (.xlsx)</span>
+        <input id="fileInput" type="file" accept=".csv,.xlsx,.xls" class="hidden" />
+      </div>
+
+      <div class="actions">
+        <button id="uploadBtn" class="btn btn-primary" disabled>Processar Planilha</button>
+        <button id="sampleBtn" class="btn btn-secondary">Testar com Dados de Exemplo</button>
+        <span id="selectedFile" class="file-pill hidden"></span>
+      </div>
+
+      <div id="errorBox" class="alert"></div>
+    </section>
+
+    <!-- Passo 2: Resumo -->
+    <section id="summarySection" class="card hidden">
+      <div class="toolbar">
+        <div>
+          <div class="card-title">2. Resultado do Processamento</div>
+          <div id="runMeta" class="card-subtitle" style="margin-bottom: 0;"></div>
+        </div>
+        <a id="downloadBtn" class="btn btn-success" href="#">Baixar Planilha Limpa (.CSV)</a>
+      </div>
+
+      <div class="stats-grid" style="margin-top: 16px;">
+        <div class="stat-box">
+          <div class="stat-label">Total Lido</div>
+          <div id="statTotal" class="stat-value">0</div>
+          <div class="stat-desc">Linhas no arquivo</div>
+        </div>
+        <div class="stat-box stat-green">
+          <div class="stat-label">Aceitas Direto</div>
+          <div id="statAccepted" class="stat-value">0</div>
+          <div class="stat-desc">Já estavam corretas</div>
+        </div>
+        <div class="stat-box stat-amber">
+          <div class="stat-label">Corrigidas</div>
+          <div id="statCorrected" class="stat-value">0</div>
+          <div class="stat-desc">Padronizadas automaticamente</div>
+        </div>
+        <div class="stat-box stat-red">
+          <div class="stat-label">Rejeitadas</div>
+          <div id="statRejected" class="stat-value">0</div>
+          <div id="statDuplicates" class="stat-desc">Erros ou duplicadas</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Passo 3: Visualização -->
+    <section id="detailsSection" class="card hidden">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="cleaned">Dados Limpos (Prontos)</button>
+        <button class="tab-btn" data-tab="rejected">Linhas Rejeitadas (O que deu erro)</button>
+        <button class="tab-btn" data-tab="history">Histórico de Envios</button>
+      </div>
+
+      <div id="tab-cleaned" class="table-wrap"></div>
+      <div id="tab-rejected" class="table-wrap hidden"></div>
+      <div id="tab-history" class="table-wrap hidden"></div>
+    </section>
+  </main>
+
+  <script>
+    const REASON_LABELS = {
+      missing_or_invalid_policy_id: "Nº da apólice ausente ou inválido",
+      duplicate_policy_id: "Apólice duplicada no arquivo",
+      missing_or_invalid_customer_name: "Nome do cliente ausente ou inválido",
+      invalid_document_id: "CPF ou CNPJ inválido",
+      invalid_email: "E-mail com formato inválido",
+      invalid_product_type: "Tipo de seguro não reconhecido",
+      invalid_premium_amount: "Valor do prêmio inválido",
+      non_positive_premium: "Valor do prêmio deve ser maior que zero",
+      invalid_start_date: "Data de início inválida",
+      invalid_status: "Status não reconhecido",
+      invalid_region: "Estado (UF) não reconhecido"
+    };
+
+    const CORRECTION_LABELS = {
+      "policy_id:normalized": "Apólice padronizada",
+      "customer_name:title_case": "Nome ajustado",
+      "document_id:digits_only": "CPF/CNPJ sem pontuação",
+      "email:normalized": "E-mail padronizado",
+      "product_type:standardized": "Ramo padronizado",
+      "premium_amount:currency_parsed": "Valor convertido",
+      "start_date:iso_standardized": "Data padronizada",
+      "status:standardized": "Status padronizado",
+      "region:uf_standardized": "UF padronizada"
+    };
+
+    const dropzone = document.getElementById("dropzone");
+    const fileInput = document.getElementById("fileInput");
+    const uploadBtn = document.getElementById("uploadBtn");
+    const sampleBtn = document.getElementById("sampleBtn");
+    const selectedFileEl = document.getElementById("selectedFile");
+    const errorBox = document.getElementById("errorBox");
+    const summarySection = document.getElementById("summarySection");
+    const detailsSection = document.getElementById("detailsSection");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    let currentFile = null;
+    let currentRunId = null;
+
+    function showError(msg) {
+      errorBox.textContent = msg;
+      errorBox.classList.add("error");
+    }
+
+    function clearError() {
+      errorBox.textContent = "";
+      errorBox.classList.remove("error");
+    }
+
+    function setSelectedFile(file) {
+      currentFile = file;
+      selectedFileEl.textContent = `Arquivo: ${file.name}`;
+      selectedFileEl.classList.remove("hidden");
+      uploadBtn.disabled = false;
+      clearError();
+    }
+
+    dropzone.addEventListener("click", () => fileInput.click());
+    fileInput.addEventListener("change", (e) => {
+      if (e.target.files.length > 0) setSelectedFile(e.target.files[0]);
+    });
+
+    dropzone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropzone.classList.add("dragover");
+    });
+    dropzone.addEventListener("dragleave", () => dropzone.classList.remove("dragover"));
+    dropzone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      dropzone.classList.remove("dragover");
+      if (e.dataTransfer.files.length > 0) setSelectedFile(e.dataTransfer.files[0]);
+    });
+
+    async function processFile(file) {
+      clearError();
+      uploadBtn.disabled = true;
+      sampleBtn.disabled = true;
+      uploadBtn.textContent = "Processando...";
+
+      try {
+        const formData = new FormData();
+        formData.append("file", file);
+
+        const resp = await fetch("/api/v1/ingest", { method: "POST", body: formData });
+        const data = await resp.json();
+
+        if (!resp.ok) {
+          throw new Error(data.detail || "Não foi possível processar o arquivo.");
+        }
+
+        currentRunId = data.run_id;
+        renderSummary(data);
+        await Promise.all([loadCleaned(currentRunId), loadRejected(currentRunId), loadHistory()]);
+      } catch (err) {
+        showError(err.message);
+      } finally {
+        uploadBtn.disabled = !currentFile;
+        sampleBtn.disabled = false;
+        uploadBtn.textContent = "Processar Planilha";
+      }
+    }
+
+    uploadBtn.addEventListener("click", () => {
+      if (currentFile) processFile(currentFile);
+    });
+
+    sampleBtn.addEventListener("click", async () => {
+      clearError();
+      try {
+        const resp = await fetch("/api/v1/sample");
+        if (!resp.ok) throw new Error("Arquivo de exemplo não encontrado.");
+        const blob = await resp.blob();
+        const file = new File([blob], "sample_dirty_policies.csv", { type: "text/csv" });
+        setSelectedFile(file);
+        await processFile(file);
+      } catch (err) {
+        showError(err.message);
+      }
+    });
+
+    function renderSummary(data) {
+      summarySection.classList.remove("hidden");
+      detailsSection.classList.remove("hidden");
+
+      document.getElementById("statTotal").textContent = data.total_rows.toLocaleString("pt-BR");
+      document.getElementById("statAccepted").textContent = data.accepted_rows.toLocaleString("pt-BR");
+      document.getElementById("statCorrected").textContent = data.corrected_rows.toLocaleString("pt-BR");
+      document.getElementById("statRejected").textContent = data.rejected_rows.toLocaleString("pt-BR");
+      document.getElementById("statDuplicates").textContent =
+        data.duplicate_rows > 0 ? `Inclui ${data.duplicate_rows} duplicada(s)` : "Erros de validação";
+
+      document.getElementById("runMeta").textContent =
+        `Arquivo "${data.filename}" processado em ${data.processing_time_ms} ms • Aproveitamento: ${data.acceptance_rate_pct}%`;
+
+      downloadBtn.href = `/api/v1/export?format=csv&run_id=${data.run_id}`;
+    }
+
+    function translateList(raw, map) {
+      if (!raw) return "—";
+      return raw.split(";").map((item) => map[item] || item).join(", ");
+    }
+
+    async function loadCleaned(runId) {
+      const resp = await fetch(`/api/v1/records?run_id=${runId}&limit=100`);
+      const rows = await resp.json();
+      const container = document.getElementById("tab-cleaned");
+
+      if (!rows.length) {
+        container.innerHTML = `<div class="empty-msg">Nenhum registro válido encontrado nesta execução.</div>`;
+        return;
+      }
+
+      const body = rows.map((r) => `
+        <tr>
+          <td><strong>${r.policy_id}</strong></td>
+          <td>${r.customer_name}</td>
+          <td>${r.document_id}</td>
+          <td>${r.product_type}</td>
+          <td>R$ ${r.premium_amount.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</td>
+          <td>${r.start_date}</td>
+          <td>${r.status}</td>
+          <td>${r.region}</td>
+          <td>
+            ${r.was_corrected
+              ? `<span class="badge badge-fix">Corrigida</span> <small>${translateList(r.corrections_applied, CORRECTION_LABELS)}</small>`
+              : `<span class="badge badge-ok">Aceita direto</span>`}
+          </td>
+        </tr>
+      `).join("");
+
+      container.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Apólice</th><th>Cliente</th><th>CPF/CNPJ</th><th>Ramo</th>
+              <th>Prêmio</th><th>Início</th><th>Status</th><th>UF</th><th>Situação</th>
+            </tr>
+          </thead>
+          <tbody>${body}</tbody>
+        </table>
+      `;
+    }
+
+    async function loadRejected(runId) {
+      const resp = await fetch(`/api/v1/runs/${runId}/rejected?limit=100`);
+      const rows = await resp.json();
+      const container = document.getElementById("tab-rejected");
+
+      if (!rows.length) {
+        container.innerHTML = `<div class="empty-msg">Nenhuma linha rejeitada nesta execução!</div>`;
+        return;
+      }
+
+      const body = rows.map((r) => {
+        let parsed = {};
+        try { parsed = JSON.parse(r.raw_data); } catch {}
+        return `
+          <tr>
+            <td><strong>Linha ${r.row_number}</strong></td>
+            <td>${parsed.policy_id || "—"}</td>
+            <td>${parsed.customer_name || "—"}</td>
+            <td><span class="badge badge-err">${translateList(r.rejection_reasons, REASON_LABELS)}</span></td>
+          </tr>
+        `;
+      }).join("");
+
+      container.innerHTML = `
+        <table>
+          <thead>
+            <tr><th>Linha</th><th>Apólice Original</th><th>Cliente Original</th><th>Motivo da Rejeição</th></tr>
+          </thead>
+          <tbody>${body}</tbody>
+        </table>
+      `;
+    }
+
+    async function loadHistory() {
+      const resp = await fetch("/api/v1/runs?limit=20");
+      const runs = await resp.json();
+      const container = document.getElementById("tab-history");
+
+      if (!runs.length) {
+        container.innerHTML = `<div class="empty-msg">Nenhum envio registrado ainda.</div>`;
+        return;
+      }
+
+      const body = runs.map((run) => `
+        <tr>
+          <td>#${run.id}</td>
+          <td><strong>${run.filename}</strong></td>
+          <td>${run.total_rows}</td>
+          <td>${run.accepted_rows}</td>
+          <td>${run.corrected_rows}</td>
+          <td>${run.rejected_rows}</td>
+          <td>${run.processing_time_ms} ms</td>
+          <td><a class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.78rem;" href="/api/v1/export?format=csv&run_id=${run.id}">Baixar CSV</a></td>
+        </tr>
+      `).join("");
+
+      container.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>Arquivo</th><th>Total</th><th>Aceitas</th>
+              <th>Corrigidas</th><th>Rejeitadas</th><th>Tempo</th><th>Exportar</th>
+            </tr>
+          </thead>
+          <tbody>${body}</tbody>
+        </table>
+      `;
+    }
+
+    document.querySelectorAll(".tab-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const target = btn.dataset.tab;
+        ["cleaned", "rejected", "history"].forEach((name) => {
+          document.getElementById(`tab-${name}`).classList.toggle("hidden", name !== target);
+        });
+      });
+    });
+
+    // Load history on initial visit if any runs already exist
+    loadHistory().then(() => {
+      fetch("/api/v1/runs?limit=1").then(r => r.json()).then(runs => {
+        if (runs.length > 0) detailsSection.classList.remove("hidden");
+      });
+    });
+  </script>
+</body>
+</html>

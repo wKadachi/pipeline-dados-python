@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Database & Local Data
+*.db
+*.sqlite
+*.sqlite3
+data/pipeline.db
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,201 @@
+policy_id,customer_name,document_id,email,product_type,premium_amount,start_date,status,region
+POL-10001,Bruno Silva,43321819643,bruno.silva1@example.com,AUTO,592.85,2024-04-17,ACTIVE,RS
+  pol_10002 ,  LUCAS   de  rodrigues ,379.402.654-31,  LUCAS.RODRIGUES2@EXAMPLE.COM ,vida,"R$ 5.270,37",03/02/2025,Vencido,rj
+  pol_10003 ,  BRUNO   de  rodrigues ,184.959.310-87,  BRUNO.RODRIGUES3@EXAMPLE.COM ,empresarial,"R$ 7.148,00",28/04/2023,Cancelado,rio de janeiro
+  pol_10004 ,  DANIELA   de  pereira ,192.832.764-85,  DANIELA.PEREIRA4@EXAMPLE.COM ,automovel,"R$ 2.069,51",08-01-2025,pendente,mg
+POL-10005,Helena Rodrigues,111.111.111-11,helena.rodrigues5@example.com,RESIDENCIAL,7667.26,2026-06-08,PENDING,DF
+POL-10006,Bruno Oliveira,26916697857,bruno.oliveira6@example.com,SAUDE,8264.29,2023-11-24,ACTIVE,PR
+  pol_10007 ,  FERNANDA   de  santos ,462.704.828-95,  FERNANDA.SANTOS7@EXAMPLE.COM ,Saúde,"R$ 4.745,94",17/11/2025,ativa,rio de janeiro
+  pol_10008 ,  HELENA   de  silva ,154.303.911-15,  HELENA.SILVA8@EXAMPLE.COM ,home,"R$ 3.798,57",22/03/2024,ativa,mg
+POL-10009,Daniela Pereira,65787133102,daniela.pereira9@example.com,SAUDE,521.43,2024-10-08,ACTIVE,RJ
+  pol_10010 ,  ANA   de  souza ,105.183.473-20,  ANA.SOUZA10@EXAMPLE.COM ,automovel,"R$ 5.720,71",26-04-2026,Vencido,Minas Gerais
+  pol_10011 ,  HELENA   de  silva ,106.513.338-30,  HELENA.SILVA11@EXAMPLE.COM ,home,"R$ 1.147,96",15/05/2024,Ativo,São Paulo
+  pol_10012 ,  CARLOS   de  rodrigues ,773.602.606-80,  CARLOS.RODRIGUES12@EXAMPLE.COM ,Saúde,"R$ 8.244,98",14/05/2026,Cancelado,sp
+POL-10013,Ana Almeida,88208121932,ana.almeida13@example.com,AUTO,5852.98,2024-07-04,PENDING,SP
+  pol_10014 ,  GABRIEL   de  costa ,435.346.247-42,  GABRIEL.COSTA14@EXAMPLE.COM ,home,"R$ 2.511,38",15-01-2023,Ativo,São Paulo
+  pol_10015 ,  FERNANDA   de  pereira ,278.498.084-79,  FERNANDA.PEREIRA15@EXAMPLE.COM ,home,"R$ 2.066,63",04-05-2024,pendente,mg
+POL-10016,Eduardo Almeida,40164005200,eduardo.almeida16@example.com,SAUDE,-250.00,2026-09-23,EXPIRED,SP
+POL-10017,Lucas Silva,59826204595,lucas.silva17@example.com,AUTO,7676.24,2024-11-08,ACTIVE,SC
+  pol_10018 ,  GABRIEL   de  oliveira ,322.602.563-50,  GABRIEL.OLIVEIRA18@EXAMPLE.COM ,Residencial,"R$ 3.199,72",28/07/2023,pendente,sp
+POL-10019,Daniela Rodrigues,54145868536,daniela.rodrigues19@example.com,UNKNOWN_PLAN,1290.04,2025-03-19,CANCELLED,SP
+POL-10020,Fernanda Costa,69816934027,fernanda.costa20@example.com,RESIDENCIAL,363.78,2024-06-14,ACTIVE,SC
+  pol_10021 ,  BRUNO   de  pereira ,846.564.823-90,  BRUNO.PEREIRA21@EXAMPLE.COM ,automovel,"R$ 2.826,58",24/11/2026,Vencido,rj
+  pol_10022 ,  MARIANA   de  costa ,777.387.214-72,  MARIANA.COSTA22@EXAMPLE.COM ,Saúde,"R$ 1.550,93",27/02/2025,pendente,Minas Gerais
+POL-10008,Mariana Santos,76936763251,mariana.santos23@example.com,AUTO,7625.18,2023-07-08,PENDING,DF
+  pol_10024 ,  BRUNO   de  almeida ,278.895.798-02,  BRUNO.ALMEIDA24@EXAMPLE.COM ,Saúde,"R$ 7.194,88",24-03-2026,ativa,Minas Gerais
+  pol_10025 ,  DANIELA   de  pereira ,714.345.581-42,  DANIELA.PEREIRA25@EXAMPLE.COM ,vida,"R$ 4.772,28",05-12-2026,Ativo,São Paulo
+  pol_10026 ,  GABRIEL   de  rodrigues ,909.670.546-72,  GABRIEL.RODRIGUES26@EXAMPLE.COM ,Residencial,"R$ 3.089,46",08-08-2024,pendente,Minas Gerais
+POL-10027,Carlos Silva,69901627249,carlos.silva27@example.com,AUTO,2470.27,2025-04-15,CANCELLED,SC
+POL-10028,Gabriel Pereira,64170805364,gabriel.pereira28@example.com,AUTO,6717.05,2023-01-08,PENDING,SP
+POL-10029,Daniela Oliveira,71937452980,daniela.oliveira29@example.com,EMPRESARIAL,8204.44,2023-03-10,ACTIVE,SP
+  pol_10030 ,  MARIANA   de  rodrigues ,631.931.491-52,  MARIANA.RODRIGUES30@EXAMPLE.COM ,vida,"R$ 453,12",14-09-2025,Vencido,sp
+  pol_10031 ,  GABRIEL   de  costa ,726.284.987-58,  GABRIEL.COSTA31@EXAMPLE.COM ,Residencial,"R$ 2.337,49",28-06-2025,ativa,rj
+  pol_10032 ,  GABRIEL   de  costa ,075.273.545-42,  GABRIEL.COSTA32@EXAMPLE.COM ,Residencial,"R$ 4.331,91",01/09/2025,Vencido,mg
+POL-10033,Helena Almeida,01436349508,helena.almeida33@example.com,RESIDENCIAL,4860.80,2025-07-24,CANCELLED,SC
+POL-10034,Eduardo Pereira,43135182312,eduardo.pereira34@example.com,VIDA,6369.63,2025-12-19,CANCELLED,RJ
+POL-10035,Eduardo Souza,52408240026,eduardo.souza35@example.com,EMPRESARIAL,2730.91,2024-11-28,EXPIRED,RJ
+  pol_10036 ,  MARIANA   de  pereira ,777.520.471-04,  MARIANA.PEREIRA36@EXAMPLE.COM ,home,"R$ 8.085,37",21/10/2023,pendente,sp
+POL-10037,Lucas Rodrigues,99938677487,lucas.rodrigues37@example.com,EMPRESARIAL,8418.75,2025-10-20,ACTIVE,RJ
+POL-10038,Daniela Souza,41232812064,daniela.souza38@example.com,RESIDENCIAL,4021.61,2026-05-02,PENDING,PR
+  pol_10039 ,  HELENA   de  santos ,349.361.832-88,  HELENA.SANTOS39@EXAMPLE.COM ,Residencial,"R$ 5.962,73",06-01-2023,Cancelado,rj
+POL-10040,Lucas Almeida,71906594040,lucas.almeida40@example.com,AUTO,2215.73,2023-11-27,CANCELLED,SP
+  pol_10041 ,  CARLOS   de  almeida ,874.296.717-13,  CARLOS.ALMEIDA41@EXAMPLE.COM ,Residencial,"R$ 2.698,98",04-11-2025,ativa,sp
+POL-10042,Helena Santos,54516808765,helena.santos42@example.com,RESIDENCIAL,791.76,2025-10-25,EXPIRED,DF
+POL-10043,Daniela Pereira,82477109359,daniela.pereira43@example.com,VIDA,2882.61,2023-09-14,ACTIVE,RS
+  pol_10044 ,  BRUNO   de  almeida ,127.484.677-36,  BRUNO.ALMEIDA44@EXAMPLE.COM ,Residencial,"R$ 3.119,98",07-07-2024,Ativo,rio de janeiro
+POL-10045,Eduardo Almeida,27875588600,eduardo.almeida45@example.com,RESIDENCIAL,7952.75,2024-12-08,EXPIRED,RS
+POL-10046,Gabriel Silva,57662702839,gabriel.silva46@example.com,EMPRESARIAL,3055.76,2023-08-04,EXPIRED,SP
+POL-10047,Gabriel Oliveira,17459615854,gabriel.oliveira47@example.com,RESIDENCIAL,8126.24,2026-09-02,ACTIVE,RS
+  pol_10048 ,  EDUARDO   de  souza ,161.172.400-74,  EDUARDO.SOUZA48@EXAMPLE.COM ,Residencial,"R$ 4.962,31",12/06/2025,pendente,São Paulo
+  pol_10049 ,  BRUNO   de  rodrigues ,937.923.747-22,  BRUNO.RODRIGUES49@EXAMPLE.COM ,vida,"R$ 8.399,36",22-05-2026,Vencido,mg
+POL-10044,Eduardo Almeida,43671369574,eduardo.almeida50@example.com,EMPRESARIAL,2761.36,2025-01-27,EXPIRED,PR
+POL-10051,Ana Almeida,43953394258,ana.almeida51@example.com,AUTO,7712.74,2023-05-26,EXPIRED,SP
+POL-10052,Carlos Santos,45623285848,carlos.santos52@example.com,EMPRESARIAL,7794.92,2024-05-27,EXPIRED,PR
+POL-10053,Fernanda Santos,71236851641,fernanda.santos53@example.com,AUTO,2505.34,2023-08-12,CANCELLED,BA
+POL-10003,Fernanda Santos,37098593109,fernanda.santos54@example.com,RESIDENCIAL,7761.51,2025-11-14,ACTIVE,MG
+POL-10055,Eduardo Almeida,11382675895,eduardo.almeida55@example.com,RESIDENCIAL,5136.82,2024-07-21,ACTIVE,DF
+POL-10056,Eduardo Silva,53773515847,eduardo.silva56@example.com,SAUDE,843.48,2025-04-04,EXPIRED,RJ
+  pol_10057 ,  MARIANA   de  silva ,053.293.183-19,  MARIANA.SILVA57@EXAMPLE.COM ,Saúde,"R$ 8.398,35",25-06-2024,pendente,sp
+POL-10058,Ana Oliveira,05395024050,ana.oliveira58@example.com,VIDA,6395.00,2023-12-03,EXPIRED,DF
+POL-10059,Lucas Santos,78390847027,lucas.santos59@example.com,AUTO,8488.48,2026-07-22,ACTIVE,DF
+  pol_10060 ,  HELENA   de  santos ,159.212.499-20,  HELENA.SANTOS60@EXAMPLE.COM ,Residencial,"R$ 1.158,30",17/10/2026,ativa,mg
+POL-10061,Daniela Rodrigues,111.111.111-11,daniela.rodrigues61@example.com,RESIDENCIAL,2897.07,2025-06-05,EXPIRED,RJ
+  pol_10062 ,  BRUNO   de  rodrigues ,152.809.885-45,  BRUNO.RODRIGUES62@EXAMPLE.COM ,home,"R$ 4.485,41",02/12/2026,Vencido,São Paulo
+  pol_10063 ,  BRUNO   de  costa ,851.493.689-11,  BRUNO.COSTA63@EXAMPLE.COM ,empresarial,"R$ 6.563,64",22-10-2023,Cancelado,sp
+POL-10064,Carlos Oliveira,96120183671,carlos.oliveira64@example.com,RESIDENCIAL,4047.21,2024-06-10,CANCELLED,RJ
+POL-10065,Carlos Oliveira,90147679788,carlos.oliveira65@example.com,RESIDENCIAL,2576.31,2023-06-14,ACTIVE,PR
+POL-10056,Mariana Almeida,84036900374,mariana.almeida66@example.com,SAUDE,8054.39,2024-05-10,CANCELLED,RJ
+POL-10067,Carlos Oliveira,68388516019,carlos.oliveira67@example.com,RESIDENCIAL,502.74,2023-06-19,EXPIRED,BA
+  pol_10068 ,  GABRIEL   de  pereira ,160.529.751-80,  GABRIEL.PEREIRA68@EXAMPLE.COM ,vida,"R$ 6.428,31",19/07/2024,Cancelado,São Paulo
+  pol_10069 ,  BRUNO   de  santos ,883.552.312-52,  BRUNO.SANTOS69@EXAMPLE.COM ,home,"R$ 6.543,00",03-11-2024,ativa,mg
+POL-10037,Mariana Costa,52717744908,mariana.costa70@example.com,AUTO,3218.33,2023-05-15,EXPIRED,SP
+  pol_10071 ,  BRUNO   de  santos ,998.679.807-86,  BRUNO.SANTOS71@EXAMPLE.COM ,vida,"R$ 8.356,44",16/10/2025,ativa,mg
+POL-10072,Carlos Silva,111.111.111-11,carlos.silva72@example.com,SAUDE,3507.44,2025-11-20,ACTIVE,SC
+POL-10073,Lucas Rodrigues,44925192540,lucas.rodrigues73@example.com,SAUDE,8236.73,2026-03-20,ACTIVE,PR
+POL-10074,Fernanda Oliveira,111.111.111-11,fernanda.oliveira74@example.com,VIDA,3135.12,2026-04-08,PENDING,MG
+POL-10075,Lucas Silva,59296222990,lucas.silva75@example.com,VIDA,6227.64,2023-07-12,PENDING,DF
+POL-10076,Helena Souza,83473597767,helena.souza76@example.com,SAUDE,6691.71,2026-03-27,PENDING,MG
+POL-10077,Ana Almeida,58181412419,ana.almeida77@example.com,RESIDENCIAL,7728.25,2024-07-03,PENDING,DF
+  pol_10078 ,  ANA   de  rodrigues ,068.536.153-52,  ANA.RODRIGUES78@EXAMPLE.COM ,vida,"R$ 7.826,78",21-12-2023,pendente,mg
+  pol_10079 ,  HELENA   de  almeida ,901.043.289-08,  HELENA.ALMEIDA79@EXAMPLE.COM ,empresarial,"R$ 6.820,28",10-04-2025,Ativo,sp
+POL-10080,Helena Silva,111.111.111-11,helena.silva80@example.com,VIDA,5000.91,2024-11-22,ACTIVE,SC
+POL-10081,Gabriel Almeida,06540515340,gabriel.almeida81@example.com,AUTO,6637.74,2025-03-02,CANCELLED,SC
+  pol_10082 ,  CARLOS   de  almeida ,722.170.430-99,  CARLOS.ALMEIDA82@EXAMPLE.COM ,empresarial,"R$ 1.907,49",17-05-2025,Ativo,mg
+  pol_10083 ,  FERNANDA   de  pereira ,156.676.527-73,  FERNANDA.PEREIRA83@EXAMPLE.COM ,Saúde,"R$ 4.795,62",24-02-2025,Ativo,sp
+POL-10084,Fernanda Pereira,47962757035,fernanda.pereira84@example.com,SAUDE,5361.04,2026-05-21,ACTIVE,RJ
+POL-10085,Gabriel Costa,82029702102,gabriel.costa85@example.com,VIDA,6694.90,2025-06-13,ACTIVE,MG
+POL-10086,Fernanda Costa,71928565417,fernanda.costa86@example.com,VIDA,8178.24,2023-12-06,EXPIRED,BA
+POL-10087,Bruno Pereira,47394731278,bruno.pereira87@example.com,AUTO,4034.15,2026-02-26,CANCELLED,SC
+POL-10088,Lucas Pereira,42258313295,lucas.pereira88@example.com,VIDA,6791.54,2023-06-18,CANCELLED,DF
+POL-10089,Lucas Oliveira,91146786670,lucas.oliveira89@example.com,EMPRESARIAL,951.07,2025-11-03,EXPIRED,DF
+POL-10090,Fernanda Oliveira,89226801800,fernanda.oliveira90@example.com,VIDA,2828.62,2024-06-23,PENDING,SC
+POL-10091,Lucas Pereira,14384249810,lucas.pereira91@example.com,AUTO,4445.97,2024-10-19,PENDING,MG
+  pol_10092 ,  MARIANA   de  costa ,900.109.439-27,  MARIANA.COSTA92@EXAMPLE.COM ,empresarial,"R$ 3.659,65",21-08-2023,Ativo,mg
+  pol_10093 ,  ANA   de  oliveira ,767.735.925-69,  ANA.OLIVEIRA93@EXAMPLE.COM ,Residencial,"R$ 1.348,55",05-07-2025,pendente,São Paulo
+  pol_10094 ,  BRUNO   de  silva ,469.632.595-42,  BRUNO.SILVA94@EXAMPLE.COM ,automovel,"R$ 8.053,65",15-09-2026,pendente,São Paulo
+POL-10007,Mariana Costa,00479748004,mariana.costa95@example.com,AUTO,3862.06,2025-12-12,EXPIRED,SC
+POL-10096,Mariana Souza,58416878404,mariana.souza96@example.com,EMPRESARIAL,5895.25,2023-03-04,EXPIRED,SC
+  pol_10097 ,  FERNANDA   de  costa ,239.868.000-26,  FERNANDA.COSTA97@EXAMPLE.COM ,home,"R$ 2.946,02",15-09-2026,ativa,mg
+  pol_10098 ,  EDUARDO   de  costa ,888.794.705-82,  EDUARDO.COSTA98@EXAMPLE.COM ,empresarial,"R$ 6.730,67",10/10/2026,Ativo,rj
+  pol_10099 ,  HELENA   de  oliveira ,896.230.913-03,  HELENA.OLIVEIRA99@EXAMPLE.COM ,home,"R$ 7.852,25",14/03/2026,pendente,rj
+  pol_10100 ,  DANIELA   de  costa ,786.527.858-64,  DANIELA.COSTA100@EXAMPLE.COM ,vida,"R$ 2.182,67",16-10-2025,Cancelado,mg
+POL-10092,Daniela Almeida,57584419887,daniela.almeida101@example.com,RESIDENCIAL,7650.45,2026-06-25,PENDING,PR
+POL-10053,Bruno Costa,74733848480,bruno.costa102@example.com,VIDA,1240.20,2024-04-02,PENDING,RS
+POL-10103,Fernanda Almeida,12082677362,fernanda.almeida103@example.com,SAUDE,2967.52,2023-02-21,PENDING,SP
+POL-10104,Carlos Rodrigues,20672400480,carlos.rodrigues104@example.com,EMPRESARIAL,5262.68,2025-05-15,EXPIRED,MG
+  pol_10105 ,  HELENA   de  pereira ,315.274.205-31,  HELENA.PEREIRA105@EXAMPLE.COM ,automovel,"R$ 3.616,79",20/03/2024,pendente,São Paulo
+POL-10106,Helena Costa,111.111.111-11,helena.costa106@example.com,EMPRESARIAL,6241.49,2023-05-21,CANCELLED,RS
+POL-10107,Helena Pereira,26841459385,helena.pereira107@example.com,VIDA,8152.49,2026-03-15,CANCELLED,BA
+  pol_10108 ,  HELENA   de  souza ,391.878.519-03,  HELENA.SOUZA108@EXAMPLE.COM ,home,"R$ 3.951,00",18/10/2024,ativa,Minas Gerais
+POL-10109,Bruno Almeida,07286790862,bruno.almeida109@example.com,RESIDENCIAL,5833.06,2025-12-01,EXPIRED,PR
+POL-10110,Daniela Santos,06518017023,daniela.santos110@example.com,SAUDE,3682.27,2024-11-24,EXPIRED,SC
+  pol_10111 ,  GABRIEL   de  almeida ,661.825.128-14,  GABRIEL.ALMEIDA111@EXAMPLE.COM ,empresarial,"R$ 4.787,23",25-01-2024,pendente,São Paulo
+POL-10112,Helena Costa,24310690360,helena.costa112@example.com,VIDA,898.42,2023-08-20,ACTIVE,RS
+  pol_10113 ,  GABRIEL   de  almeida ,383.028.439-03,  GABRIEL.ALMEIDA113@EXAMPLE.COM ,vida,"R$ 846,80",10/04/2025,Vencido,rj
+POL-10114,Helena Silva,56856624670,helena.silva114@example.com,VIDA,6498.49,2026-04-28,PENDING,PR
+  pol_10115 ,  CARLOS   de  almeida ,086.688.263-44,  CARLOS.ALMEIDA115@EXAMPLE.COM ,Saúde,"R$ 770,02",28-08-2023,ativa,rj
+POL-10116,Ana Santos,39837354011,ana.santos116@example.com,VIDA,7987.85,2023-12-25,EXPIRED,RS
+POL-10117,Daniela Rodrigues,38546785414,daniela.rodrigues117@example.com,SAUDE,3281.10,2026-08-04,EXPIRED,SC
+  pol_10118 ,  FERNANDA   de  costa ,609.320.489-86,  FERNANDA.COSTA118@EXAMPLE.COM ,Saúde,"R$ 4.419,31",07-03-2025,Cancelado,Minas Gerais
+  pol_10119 ,  HELENA   de  almeida ,252.287.280-07,  HELENA.ALMEIDA119@EXAMPLE.COM ,empresarial,"R$ 2.236,18",02/11/2023,Ativo,São Paulo
+POL-10105,Lucas Almeida,50997700882,lucas.almeida120@example.com,EMPRESARIAL,3702.41,2023-09-24,CANCELLED,PR
+POL-10121,Gabriel Oliveira,11823398405,gabriel.oliveira121@example.com,SAUDE,2528.70,2026-02-12,EXPIRED,DF
+POL-10122,Daniela Pereira,10166687081,daniela.pereira122@example.com,AUTO,6078.19,2023-08-28,EXPIRED,SC
+POL-10123,Bruno Silva,33974014888,bruno.silva123@example.com,EMPRESARIAL,5713.59,2024-06-01,PENDING,MG
+POL-10124,Gabriel Santos,42939685630,gabriel.santos124@example.com,VIDA,-250.00,2023-09-24,CANCELLED,SP
+POL-10125,Bruno Costa,99965047782,bruno.costa125@example.com,VIDA,3249.86,2026-07-06,EXPIRED,RJ
+  pol_10126 ,  EDUARDO   de  souza ,114.262.655-57,  EDUARDO.SOUZA126@EXAMPLE.COM ,Saúde,"R$ 3.862,48",12-08-2025,Ativo,sp
+  pol_10127 ,  BRUNO   de  costa ,819.956.046-07,  BRUNO.COSTA127@EXAMPLE.COM ,vida,"R$ 2.804,22",17-10-2024,pendente,sp
+POL-10128,Carlos Rodrigues,46471543786,carlos.rodrigues128@example.com,EMPRESARIAL,5375.85,2026-02-05,CANCELLED,SP
+POL-10129,Fernanda Rodrigues,57569245903,fernanda.rodrigues129@example.com,VIDA,4253.93,2024-07-11,CANCELLED,DF
+POL-10130,Daniela Costa,64651939813,daniela.costa130@example.com,VIDA,5905.96,2023-12-15,PENDING,DF
+POL-10131,Bruno Rodrigues,72434266118,bruno.rodrigues131@example.com,RESIDENCIAL,8424.21,2026-10-13,EXPIRED,SP
+  pol_10132 ,  FERNANDA   de  santos ,135.290.965-04,  FERNANDA.SANTOS132@EXAMPLE.COM ,Residencial,"R$ 6.644,59",08/05/2023,Cancelado,sp
+  pol_10133 ,  HELENA   de  santos ,461.125.457-72,  HELENA.SANTOS133@EXAMPLE.COM ,vida,"R$ 714,17",04/08/2025,Ativo,rio de janeiro
+POL-10051,Bruno Oliveira,38282586706,bruno.oliveira134@example.com,VIDA,6851.71,2024-03-21,EXPIRED,BA
+  pol_10135 ,  HELENA   de  rodrigues ,603.341.918-90,  HELENA.RODRIGUES135@EXAMPLE.COM ,empresarial,"R$ 2.904,24",04-08-2024,ativa,Minas Gerais
+POL-10136,Mariana Santos,55792499187,mariana.santos136@example.com,VIDA,2902.46,2024-05-04,PENDING,SC
+POL-10137,Lucas Rodrigues,69296627800,lucas.rodrigues137@example.com,VIDA,4872.54,2026-05-05,PENDING,SC
+  pol_10138 ,  MARIANA   de  silva ,507.236.887-45,  MARIANA.SILVA138@EXAMPLE.COM ,home,"R$ 601,51",27/12/2026,Cancelado,sp
+  pol_10139 ,  EDUARDO   de  souza ,842.797.881-20,  EDUARDO.SOUZA139@EXAMPLE.COM ,Residencial,"R$ 1.184,69",27/09/2025,Cancelado,sp
+POL-10140,Helena Pereira,51713395975,helena.pereira140@example.com,RESIDENCIAL,1702.75,2024-04-27,PENDING,SP
+  pol_10141 ,  LUCAS   de  pereira ,982.544.948-94,  LUCAS.PEREIRA141@EXAMPLE.COM ,empresarial,"R$ 2.975,09",09/01/2026,Vencido,Minas Gerais
+POL-10142,Carlos Pereira,66711684583,carlos.pereira142@example.com,RESIDENCIAL,8094.57,2025-10-01,ACTIVE,DF
+POL-10143,Fernanda Santos,86363745454,fernanda.santos143@example.com,SAUDE,4810.58,2024-10-28,EXPIRED,SC
+POL-10144,Ana Silva,17012770694,ana.silva144@example.com,VIDA,8464.91,99/99/2025,PENDING,PR
+POL-10088,Eduardo Santos,52064361197,eduardo.santos145@example.com,AUTO,2089.38,2023-03-19,PENDING,DF
+POL-10146,Bruno Rodrigues,111.111.111-11,bruno.rodrigues146@example.com,SAUDE,7530.06,2024-07-25,PENDING,MG
+POL-10147,Mariana Oliveira,75326973120,mariana.oliveira147@example.com,AUTO,1491.11,2023-10-24,EXPIRED,SC
+  pol_10148 ,  FERNANDA   de  oliveira ,341.389.994-50,  FERNANDA.OLIVEIRA148@EXAMPLE.COM ,automovel,"R$ 6.737,98",17/04/2025,Vencido,Minas Gerais
+POL-10149,Bruno Souza,79180552684,bruno.souza149@example.com,EMPRESARIAL,3780.04,2024-08-25,ACTIVE,SP
+  pol_10150 ,  ANA   de  pereira ,300.684.866-77,  ANA.PEREIRA150@EXAMPLE.COM ,Saúde,"R$ 8.290,65",03/05/2024,ativa,rio de janeiro
+POL-10036,Gabriel Santos,46303161758,gabriel.santos151@example.com,EMPRESARIAL,5311.98,2025-11-24,PENDING,RJ
+  pol_10152 ,  ANA   de  oliveira ,758.842.524-55,  ANA.OLIVEIRA152@EXAMPLE.COM ,vida,"R$ 6.155,43",26/06/2023,Vencido,Minas Gerais
+POL-10094,Lucas Costa,07925241950,lucas.costa153@example.com,AUTO,2211.50,2023-01-28,ACTIVE,RS
+  pol_10154 ,  GABRIEL   de  oliveira ,208.635.365-06,  GABRIEL.OLIVEIRA154@EXAMPLE.COM ,home,"R$ 8.348,52",17-02-2025,Ativo,Minas Gerais
+POL-10155,Eduardo Pereira,51870534930,eduardo.pereira155@example.com,SAUDE,6377.54,2024-08-12,EXPIRED,RS
+  pol_10156 ,  LUCAS   de  souza ,206.038.505-96,  LUCAS.SOUZA156@EXAMPLE.COM ,Saúde,"R$ 3.771,50",24/12/2026,pendente,mg
+POL-10157,Eduardo Santos,03865719104,eduardo.santos157@example.com,EMPRESARIAL,1438.14,2026-02-19,ACTIVE,BA
+  pol_10158 ,  CARLOS   de  souza ,445.655.743-57,  CARLOS.SOUZA158@EXAMPLE.COM ,Residencial,"R$ 2.909,37",04/10/2024,ativa,rio de janeiro
+  pol_10159 ,  DANIELA   de  almeida ,474.112.490-84,  DANIELA.ALMEIDA159@EXAMPLE.COM ,automovel,"R$ 5.869,04",03-03-2025,pendente,sp
+POL-10160,Gabriel Almeida,88317121011,gabriel.almeida160@example.com,AUTO,7117.53,2024-03-07,EXPIRED,SC
+  pol_10161 ,  BRUNO   de  pereira ,101.372.151-93,  BRUNO.PEREIRA161@EXAMPLE.COM ,Residencial,"R$ 5.918,19",19/03/2023,Cancelado,São Paulo
+  pol_10162 ,  CARLOS   de  pereira ,472.099.934-44,  CARLOS.PEREIRA162@EXAMPLE.COM ,Saúde,"R$ 5.587,62",03/01/2026,ativa,sp
+POL-10163,Gabriel Costa,78759856416,gabriel.costa163@example.com,VIDA,562.41,2024-01-26,CANCELLED,SP
+  pol_10164 ,  HELENA   de  costa ,932.133.480-74,  HELENA.COSTA164@EXAMPLE.COM ,vida,"R$ 6.920,61",27-06-2026,ativa,sp
+  pol_10165 ,  FERNANDA   de  oliveira ,937.842.701-40,  FERNANDA.OLIVEIRA165@EXAMPLE.COM ,home,"R$ 1.991,93",17/01/2024,Cancelado,mg
+  pol_10166 ,  CARLOS   de  costa ,002.921.851-97,  CARLOS.COSTA166@EXAMPLE.COM ,Saúde,"R$ 6.318,67",04-10-2026,Vencido,mg
+  pol_10167 ,  FERNANDA   de  oliveira ,895.392.644-05,  FERNANDA.OLIVEIRA167@EXAMPLE.COM ,vida,"R$ 7.856,46",19/12/2023,ativa,sp
+POL-10168,Helena Oliveira,51355215773,helena.oliveira168@example.com,AUTO,2511.48,2024-12-03,CANCELLED,PR
+  pol_10169 ,  ANA   de  silva ,676.267.658-85,  ANA.SILVA169@EXAMPLE.COM ,automovel,"R$ 2.753,51",21-10-2026,Cancelado,sp
+POL-10085,Bruno Costa,26218159957,bruno.costa170@example.com,RESIDENCIAL,6091.71,2026-11-06,EXPIRED,MG
+  pol_10171 ,  DANIELA   de  souza ,688.444.310-33,  DANIELA.SOUZA171@EXAMPLE.COM ,vida,"R$ 7.064,76",02-03-2026,pendente,sp
+  pol_10172 ,  ANA   de  souza ,241.714.677-05,  ANA.SOUZA172@EXAMPLE.COM ,automovel,"R$ 2.495,86",12-03-2026,Cancelado,São Paulo
+  pol_10173 ,  EDUARDO   de  silva ,211.586.938-93,  EDUARDO.SILVA173@EXAMPLE.COM ,automovel,"R$ 3.567,66",22/09/2026,ativa,rj
+  pol_10174 ,  LUCAS   de  oliveira ,172.233.206-99,  LUCAS.OLIVEIRA174@EXAMPLE.COM ,empresarial,"R$ 7.800,52",27/04/2026,Ativo,Minas Gerais
+POL-10175,Lucas Rodrigues,85487099871,lucas.rodrigues175@example.com,RESIDENCIAL,1267.03,2024-03-19,ACTIVE,RJ
+  pol_10176 ,  BRUNO   de  pereira ,856.467.997-32,  BRUNO.PEREIRA176@EXAMPLE.COM ,vida,"R$ 5.977,69",20/03/2026,Vencido,rio de janeiro
+  pol_10177 ,  FERNANDA   de  silva ,544.471.324-19,  FERNANDA.SILVA177@EXAMPLE.COM ,Saúde,"R$ 7.794,48",24-05-2025,Vencido,rj
+POL-10093,Fernanda Silva,82148628925,fernanda.silva178@example.com,AUTO,1765.96,2024-01-08,ACTIVE,DF
+  pol_10179 ,  DANIELA   de  pereira ,578.610.357-94,  DANIELA.PEREIRA179@EXAMPLE.COM ,vida,"R$ 6.454,03",18/10/2026,Cancelado,sp
+  pol_10180 ,  GABRIEL   de  silva ,293.333.468-21,  GABRIEL.SILVA180@EXAMPLE.COM ,home,"R$ 6.911,45",05-08-2023,Cancelado,Minas Gerais
+POL-10181,Gabriel Costa,74374896945,gabriel.costa181@example.com,AUTO,409.88,2025-09-21,CANCELLED,PR
+POL-10182,Helena Santos,54544432804,helena.santos182@example.com,VIDA,7682.45,2026-11-11,PENDING,SP
+POL-10183,Eduardo Pereira,66609935335,eduardo.pereira183@example.com,EMPRESARIAL,5552.26,2026-11-12,CANCELLED,MG
+  pol_10184 ,  LUCAS   de  oliveira ,417.248.251-19,  LUCAS.OLIVEIRA184@EXAMPLE.COM ,vida,"R$ 4.129,65",26/07/2025,Vencido,sp
+  pol_10185 ,  MARIANA   de  santos ,738.168.460-84,  MARIANA.SANTOS185@EXAMPLE.COM ,empresarial,"R$ 1.819,91",14/06/2024,Vencido,rio de janeiro
+POL-10186,Carlos Costa,00743292782,carlos.costa186@example.com,AUTO,1404.66,2026-11-14,EXPIRED,BA
+  pol_10187 ,  GABRIEL   de  silva ,083.505.830-10,  GABRIEL.SILVA187@EXAMPLE.COM ,Residencial,"R$ 4.452,19",23-04-2024,pendente,sp
+  pol_10188 ,  ANA   de  pereira ,478.985.625-93,  ANA.PEREIRA188@EXAMPLE.COM ,empresarial,"R$ 8.376,77",26/03/2024,Ativo,rj
+  pol_10189 ,  LUCAS   de  oliveira ,150.648.909-58,  LUCAS.OLIVEIRA189@EXAMPLE.COM ,automovel,"R$ 4.810,35",23-01-2023,pendente,São Paulo
+  pol_10190 ,  ANA   de  pereira ,618.499.261-90,  ANA.PEREIRA190@EXAMPLE.COM ,Saúde,"R$ 6.690,37",04/05/2023,Cancelado,mg
+POL-10191,Gabriel Pereira,20873753054,gabriel.pereira191@example.com,AUTO,5823.81,2023-10-22,EXPIRED,MG
+POL-10192,Lucas Santos,14374470158,lucas.santos192@example.com,VIDA,7474.24,2025-06-26,CANCELLED,BA
+  pol_10193 ,  BRUNO   de  silva ,022.557.941-36,  BRUNO.SILVA193@EXAMPLE.COM ,Residencial,"R$ 5.972,70",13-02-2024,Vencido,mg
+POL-10194,Carlos Santos,20216979757,carlos.santos194@example.com,VIDA,5332.28,2025-10-01,PENDING,DF
+POL-10195,Bruno Rodrigues,70145089975,bruno.rodrigues195@example.com,VIDA,8319.85,2025-09-17,ACTIVE,BA
+  pol_10196 ,  DANIELA   de  almeida ,562.890.028-13,  DANIELA.ALMEIDA196@EXAMPLE.COM ,vida,"R$ 760,36",25/02/2024,ativa,mg
+  pol_10197 ,  GABRIEL   de  rodrigues ,317.797.177-33,  GABRIEL.RODRIGUES197@EXAMPLE.COM ,automovel,"R$ 4.890,62",21/12/2026,Ativo,rj
+POL-10198,Mariana Pereira,88375503754,mariana.pereira198@example.com,SAUDE,-250.00,2026-12-22,CANCELLED,DF
+  pol_10199 ,  ANA   de  costa ,548.851.027-31,  ANA.COSTA199@EXAMPLE.COM ,Residencial,"R$ 2.107,05",09/02/2026,Cancelado,sp
+POL-10200,Gabriel Silva,91779827032,gabriel.silva200@example.com,EMPRESARIAL,6350.14,2026-10-16,PENDING,MG
